@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testcases.VerifyDeletedDBData" class="method navigator-link" hash-for-method="verifyDeletedDbData">verifyDeletedDbData</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testcases.VerifyRestAPI" class="method navigator-link" hash-for-method="APIChaining">APIChaining</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -122,14 +122,14 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testcases.VerifyDeletedDBData</span>
+              <span class="class-name">testcases.VerifyRestAPI</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyDeletedDbData">
-                  </a> <!-- verifyDeletedDbData -->
-                  <span class="method-name">verifyDeletedDbData</span>
+                  <a name="APIChaining">
+                  </a> <!-- APIChaining -->
+                  <span class="method-name">APIChaining</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -146,7 +146,7 @@
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.VerifyDeletedDBData&quot;/&gt;
+      &lt;class name=&quot;testcases.VerifyRestAPI&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -188,14 +188,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyDeletedDbData')
-data.setCell(0, 2, 'testcases.VerifyDeletedDBData')
-data.setCell(0, 3, 23286);
+data.setCell(0, 1, 'APIChaining')
+data.setCell(0, 2, 'testcases.VerifyRestAPI')
+data.setCell(0, 3, 2695);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 23 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -221,26 +221,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.VerifyDeletedDBData</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.VerifyRestAPI</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">DataSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
-                <span class="method-name">Setup(public void testcases.VerifyDeletedDBData.verifyDeletedDbData() throws java.lang.ClassNotFoundExcept...)</span>
-                <span class="method-start">239 ms</span>
+                <span class="method-name">Setup(public void testcases.VerifyRestAPI.APIChaining())</span>
+                <span class="method-start">266 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyDeletedDbData</span>
-                <span class="method-start">2939 ms</span>
+                <span class="method-name">APIChaining</span>
+                <span class="method-start">3409 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">TearDown</span>
-                <span class="method-start">26228 ms</span>
+                <span class="method-start">6107 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">DataTearDown</span>
-                <span class="method-start">26420 ms</span>
+                <span class="method-start">6393 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

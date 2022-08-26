@@ -3,15 +3,15 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testcases.VerifyDeletedDBData">
+      <class name="testcases.VerifyLogin">
         <methods>
           <include name="TearDown"/>
-          <include name="verifyDeletedDbData"/>
+          <include name="LoginSuccessTest"/>
           <include name="Setup"/>
-          <include name="DataSetup"/>
           <include name="DataTearDown"/>
+          <include name="DataSetup"/>
         </methods>
-      </class> <!-- testcases.VerifyDeletedDBData -->
+      </class> <!-- testcases.VerifyLogin -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

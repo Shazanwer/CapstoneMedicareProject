@@ -24,24 +24,42 @@ public class DeleteDataFromDB {
 //		Connection dbcon = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicare", "root", "root");
 
 		Statement stm = dbcon.createStatement();
-
-		stm.executeUpdate("delete from cart where user_id in ( select id from user_detail where first_name = 'User')");
-		stm.executeUpdate(
-				"delete from cart where user_id in ( select id from user_detail where first_name = 'Supplier')");
-		stm.executeUpdate(
-				"delete from address where user_id in ( select id from user_detail where first_name = 'User')");
-		stm.executeUpdate(
-				"delete from address where user_id in ( select id from user_detail where first_name = 'Supplier')");
-		stm.executeUpdate("delete from user_detail where first_name = 'User'");
-		stm.executeUpdate("delete from user_detail where first_name = 'Supplier'");
+		try {
+			stm.executeUpdate(
+					"delete from order_item where id in ( select id from order_detail where user_id in ( select id from user_detail where first_name = 'ShazUser'))");
+			stm.executeUpdate(
+					"delete from order_item where id in ( select id from order_detail where user_id in ( select id from user_detail where first_name = 'ShazSupplier'))");
+			stm.executeUpdate(
+					"delete from order_detail where user_id in ( select id from user_detail where first_name = 'ShazUser')");
+			stm.executeUpdate(
+					"delete from order_detail where user_id in ( select id from user_detail where first_name = 'ShazSupplier')");
+			stm.executeUpdate(
+					"delete from cart where user_id in ( select id from user_detail where first_name = 'ShazUser')");
+			stm.executeUpdate(
+					"delete from cart where user_id in ( select id from user_detail where first_name = 'ShazSupplier')");
+			stm.executeUpdate(
+					"delete from address where user_id in ( select id from user_detail where first_name = 'ShazUser')");
+			stm.executeUpdate(
+					"delete from address where user_id in ( select id from user_detail where first_name = 'ShazSupplier')");
+			stm.executeUpdate("delete from user_detail where first_name = 'ShazUser'");
+			stm.executeUpdate("delete from user_detail where first_name = 'ShazSupplier'");
+		} catch (Exception e1) {
+			System.out.println(e1.getStackTrace());
+		}
 
 		ResultSet user_detail = stm.executeQuery("Select first_name from user_detail");
 		while (user_detail.next()) {
 			String getuserdetail = user_detail.getString("first_name");
-			if (getuserdetail.contains("User")) {
+			if (getuserdetail.equals("ShazUser")) {
 				test.log(LogStatus.FAIL, "User still exisits in DB", getuserdetail);
 			} else {
-				test.log(LogStatus.PASS, "User and Supplier deleted from DB", getuserdetail);
+				test.log(LogStatus.PASS, "User deleted from DB", getuserdetail + " does not matches ShazUser");
+			}
+			
+			if (getuserdetail.equals("ShazSupplier")) {
+				test.log(LogStatus.FAIL, "Supplier still exisits in DB", getuserdetail);
+			} else {
+				test.log(LogStatus.PASS, "Supplier deleted from DB", getuserdetail + " does not matches ShazSupplier");
 			}
 		}
 

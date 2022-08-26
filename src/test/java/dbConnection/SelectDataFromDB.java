@@ -25,14 +25,14 @@ public class SelectDataFromDB {
 
 		Statement stm = dbcon.createStatement();
 
-		ResultSet getUser = stm.executeQuery("Select * from user_detail where first_name = 'User'");
+		ResultSet getUser = stm.executeQuery("Select * from user_detail where first_name = 'ShazUser'");
 		while (getUser.next()) {
 			String getUserResult = getUser.getInt("ID") + "," + getUser.getString("role") + ","
 					+ getUser.getString("email");
 			test.log(LogStatus.PASS, "Get User from DB", getUserResult);
 		}
 
-		ResultSet getSupplier = stm.executeQuery("Select * from user_detail where first_name = 'Supplier'");
+		ResultSet getSupplier = stm.executeQuery("Select * from user_detail where first_name = 'ShazSupplier'");
 		while (getSupplier.next()) {
 			String getSupplierResult = getSupplier.getInt("ID") + "," + getSupplier.getString("role") + ","
 					+ getSupplier.getString("email");
