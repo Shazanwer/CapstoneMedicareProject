@@ -137,13 +137,13 @@ public class NewUserRegisterPage {
 		test.log(LogStatus.PASS, "Enter Confirm Password", "Confirm Password entered successfully");
 		Thread.sleep(1000);
 
-		if (userRole.getText().equals(role)) {
+		if (role.equals("USER")) {
 			userRole.click();
-			test.log(LogStatus.PASS, "Select User Role", "User Role selected/checked successfully");
+			test.log(LogStatus.PASS, "Select " + userRole.getText(), "User Role selected/checked successfully");
 			Thread.sleep(1000);
-		} else if (userRole.getText().equals(role)) {
-			userRole.click();
-			test.log(LogStatus.PASS, "Select User Role", "User Role selected/checked successfully");
+		} else if (role.equals("SUPPLIER")) {
+			supplierRole.click();
+			test.log(LogStatus.PASS, "Select " + supplierRole.getText(), "Supplier Role selected/checked successfully");
 			Thread.sleep(1000);
 		}
 

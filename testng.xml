@@ -5,6 +5,8 @@
 		<classes>
 			<class name="testcases.VerifyNewUserRegisteration" />
 			<class name="testcases.VerifyLogin" />
+			<class name="testcases.VerifyDBData" />
+			<!--<class name="testcases.VerifyDeletedDBData" />-->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

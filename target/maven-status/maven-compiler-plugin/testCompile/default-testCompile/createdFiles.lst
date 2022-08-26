@@ -1,0 +1,7 @@
+dbConnection\DBConnection.class
+pages\NewUserRegisterPage.class
+testcases\BaseClass.class
+testcases\VerifyNewUserRegisteration.class
+pages\LoginPage.class
+testcases\VerifyLogin.class
+testcases\VerifyDBData.class

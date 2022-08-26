@@ -1,9 +1,12 @@
 package testcases;
 
-
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -21,21 +24,24 @@ public class BaseClass {
 	public static WebDriver driver;
 	public static ExtentReports report;
 	public static ExtentTest test;
+	public static Connection dbcon;
 
 	@BeforeTest
 	public void DataSetup() throws IOException {
 
 		report = new ExtentReports("ExtentReport.html");
+
 	}
 
 	@AfterTest
-	public void DataTearDown() throws IOException {
+	public void DataTearDown(){
 		report.flush();
 		report.close();
+
 	}
 
 	@BeforeMethod
-	public void Setup(Method method) {
+	public void Setup(Method method) throws ClassNotFoundException, SQLException {
 		test = report.startTest(method.getName());
 		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
 		driver = new ChromeDriver();
@@ -43,11 +49,15 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
 
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		dbcon = DriverManager.getConnection("jdbc:mysql://localhost:3306/medicare", "root", "root");
+
 	}
 
 	@AfterMethod
-	public void TearDown() {
+	public void TearDown() throws SQLException {
 		report.endTest(test);
+		dbcon.close();
 		driver.quit();
 	}
 

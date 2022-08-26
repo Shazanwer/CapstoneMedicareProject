@@ -1,61 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-25T08:27:24 AST" name="Suite" finished-at="2022-08-25T08:28:25 AST" duration-ms="61212">
+  <suite started-at="2022-08-26T11:09:56 AST" name="Suite" finished-at="2022-08-26T11:10:23 AST" duration-ms="26732">
     <groups>
     </groups>
-    <test started-at="2022-08-25T08:27:24 AST" name="Test" finished-at="2022-08-25T08:28:25 AST" duration-ms="61212">
-      <class name="testcases.VerifyLogin">
-        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyLogin@2ed2d9cb]" started-at="2022-08-25T08:28:16 AST" name="Setup" finished-at="2022-08-25T08:28:18 AST" duration-ms="1641" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void testcases.VerifyLogin.LoginSuccessTest() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Setup -->
-        <test-method signature="LoginSuccessTest()[pri:0, instance:testcases.VerifyLogin@2ed2d9cb]" started-at="2022-08-25T08:28:18 AST" name="LoginSuccessTest" finished-at="2022-08-25T08:28:24 AST" duration-ms="6742" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LoginSuccessTest -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyLogin@2ed2d9cb]" started-at="2022-08-25T08:28:24 AST" name="TearDown" finished-at="2022-08-25T08:28:25 AST" duration-ms="200" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TearDown -->
-      </class> <!-- testcases.VerifyLogin -->
-      <class name="testcases.VerifyNewUserRegisteration">
-        <test-method is-config="true" signature="DataSetup()[pri:0, instance:testcases.VerifyNewUserRegisteration@306e95ec]" started-at="2022-08-25T08:27:24 AST" name="DataSetup" finished-at="2022-08-25T08:27:24 AST" duration-ms="226" status="PASS">
+    <test started-at="2022-08-26T11:09:56 AST" name="Test" finished-at="2022-08-26T11:10:23 AST" duration-ms="26732">
+      <class name="testcases.VerifyDeletedDBData">
+        <test-method is-config="true" signature="DataSetup()[pri:0, instance:testcases.VerifyDeletedDBData@209da20d]" started-at="2022-08-26T11:09:56 AST" name="DataSetup" finished-at="2022-08-26T11:09:56 AST" duration-ms="215" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DataSetup -->
-        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyNewUserRegisteration@306e95ec]" started-at="2022-08-25T08:27:24 AST" name="Setup" finished-at="2022-08-25T08:27:26 AST" duration-ms="2244" status="PASS">
+        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyDeletedDBData@209da20d]" started-at="2022-08-26T11:09:56 AST" name="Setup" finished-at="2022-08-26T11:09:59 AST" duration-ms="2700" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void testcases.VerifyNewUserRegisteration.NewUserRegisteration() throws java.lang.InterruptedException]]>
+                <![CDATA[public void testcases.VerifyDeletedDBData.verifyDeletedDbData() throws java.lang.ClassNotFoundException,java.sql.SQLException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="NewUserRegisteration()[pri:0, instance:testcases.VerifyNewUserRegisteration@306e95ec]" started-at="2022-08-25T08:27:26 AST" name="NewUserRegisteration" finished-at="2022-08-25T08:28:16 AST" duration-ms="49535" status="PASS">
+        <test-method signature="verifyDeletedDbData()[pri:0, instance:testcases.VerifyDeletedDBData@209da20d]" started-at="2022-08-26T11:09:59 AST" name="verifyDeletedDbData" finished-at="2022-08-26T11:10:22 AST" duration-ms="23286" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NewUserRegisteration -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyNewUserRegisteration@306e95ec]" started-at="2022-08-25T08:28:16 AST" name="TearDown" finished-at="2022-08-25T08:28:16 AST" duration-ms="227" status="PASS">
+        </test-method> <!-- verifyDeletedDbData -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyDeletedDBData@209da20d]" started-at="2022-08-26T11:10:22 AST" name="TearDown" finished-at="2022-08-26T11:10:23 AST" duration-ms="189" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="DataTearDown()[pri:0, instance:testcases.VerifyNewUserRegisteration@306e95ec]" started-at="2022-08-25T08:28:25 AST" name="DataTearDown" finished-at="2022-08-25T08:28:25 AST" duration-ms="327" status="PASS">
+        <test-method is-config="true" signature="DataTearDown()[pri:0, instance:testcases.VerifyDeletedDBData@209da20d]" started-at="2022-08-26T11:10:23 AST" name="DataTearDown" finished-at="2022-08-26T11:10:23 AST" duration-ms="306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DataTearDown -->
-      </class> <!-- testcases.VerifyNewUserRegisteration -->
+      </class> <!-- testcases.VerifyDeletedDBData -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

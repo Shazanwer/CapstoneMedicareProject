@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.452 s - in TestSuite
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.928 s <<< FAILURE! - in TestSuite
+testcases.VerifyDBData.verifyDbData  Time elapsed: 0.364 s  <<< FAILURE!
+java.sql.SQLException: Operation not allowed after ResultSet closed
+	at testcases.VerifyDBData.verifyDbData(VerifyDBData.java:13)
+
