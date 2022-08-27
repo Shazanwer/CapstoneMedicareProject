@@ -38,7 +38,8 @@ pipeline {
                 expression { env.RunPostmanCollection.toBoolean() }
             }
             steps {
-                bat "newman run 'postman//CapstoneMedicareProject.postman_collection.json' -r htmlextra"
+                bat "cd postman &
+					newman run 'CapstoneMedicareProject.postman_collection.json' -r htmlextra"
             }
         }
         
