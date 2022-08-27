@@ -1,17 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="10" total="16" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-26T19:19:24 AST" name="Suite" finished-at="2022-08-26T19:19:31 AST" duration-ms="6879">
+  <suite started-at="2022-08-27T12:05:55 AST" name="Suite" finished-at="2022-08-27T12:07:41 AST" duration-ms="106580">
     <groups>
     </groups>
-    <test started-at="2022-08-26T19:19:24 AST" name="Test" finished-at="2022-08-26T19:19:31 AST" duration-ms="6879">
-      <class name="testcases.VerifyRestAPI">
-        <test-method is-config="true" signature="DataSetup()[pri:0, instance:testcases.VerifyRestAPI@4659191b]" started-at="2022-08-26T19:19:24 AST" name="DataSetup" finished-at="2022-08-26T19:19:24 AST" duration-ms="240" status="PASS">
+    <test started-at="2022-08-27T12:05:55 AST" name="Test" finished-at="2022-08-27T12:07:41 AST" duration-ms="106580">
+      <class name="testcases.VerifyDeletedDBData">
+        <test-method is-config="true" signature="DataSetup()[pri:0, instance:testcases.VerifyDeletedDBData@6bd61f98]" started-at="2022-08-27T12:05:55 AST" name="DataSetup" finished-at="2022-08-27T12:05:55 AST" duration-ms="263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- DataSetup -->
-        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyRestAPI@4659191b]" started-at="2022-08-26T19:19:24 AST" name="Setup" finished-at="2022-08-26T19:19:27 AST" duration-ms="3143" status="PASS">
+        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyDeletedDBData@6bd61f98]" started-at="2022-08-27T12:05:55 AST" name="Setup" finished-at="2022-08-27T12:05:59 AST" duration-ms="3350" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.VerifyDeletedDBData.verifyDeletedDbData() throws java.lang.ClassNotFoundException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="verifyDeletedDbData()[pri:0, instance:testcases.VerifyDeletedDBData@6bd61f98]" started-at="2022-08-27T12:05:59 AST" name="verifyDeletedDbData" finished-at="2022-08-27T12:05:59 AST" duration-ms="99" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeletedDbData -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyDeletedDBData@6bd61f98]" started-at="2022-08-27T12:05:59 AST" name="TearDown" finished-at="2022-08-27T12:05:59 AST" duration-ms="317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+        <test-method is-config="true" signature="DataTearDown()[pri:0, instance:testcases.VerifyDeletedDBData@6bd61f98]" started-at="2022-08-27T12:07:41 AST" name="DataTearDown" finished-at="2022-08-27T12:07:41 AST" duration-ms="544" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DataTearDown -->
+      </class> <!-- testcases.VerifyDeletedDBData -->
+      <class name="testcases.VerifyLogin">
+        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyLogin@7db12bb6]" started-at="2022-08-27T12:06:55 AST" name="Setup" finished-at="2022-08-27T12:06:57 AST" duration-ms="1749" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.VerifyLogin.LoginSuccessTest() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="LoginSuccessTest()[pri:0, instance:testcases.VerifyLogin@7db12bb6]" started-at="2022-08-27T12:06:57 AST" name="LoginSuccessTest" finished-at="2022-08-27T12:07:11 AST" duration-ms="14294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginSuccessTest -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyLogin@7db12bb6]" started-at="2022-08-27T12:07:11 AST" name="TearDown" finished-at="2022-08-27T12:07:11 AST" duration-ms="270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- testcases.VerifyLogin -->
+      <class name="testcases.VerifyDBData">
+        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyDBData@273e7444]" started-at="2022-08-27T12:06:53 AST" name="Setup" finished-at="2022-08-27T12:06:55 AST" duration-ms="1912" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.VerifyDBData.verifyDbData() throws java.lang.ClassNotFoundException,java.sql.SQLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="verifyDbData()[pri:0, instance:testcases.VerifyDBData@273e7444]" started-at="2022-08-27T12:06:55 AST" name="verifyDbData" finished-at="2022-08-27T12:06:55 AST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDbData -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyDBData@273e7444]" started-at="2022-08-27T12:06:55 AST" name="TearDown" finished-at="2022-08-27T12:06:55 AST" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- testcases.VerifyDBData -->
+      <class name="testcases.VerifyNewUserRegisteration">
+        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyNewUserRegisteration@52b1beb6]" started-at="2022-08-27T12:05:59 AST" name="Setup" finished-at="2022-08-27T12:06:01 AST" duration-ms="1920" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.VerifyNewUserRegisteration.NewUserRegisteration() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="NewUserRegisteration()[pri:0, instance:testcases.VerifyNewUserRegisteration@52b1beb6]" started-at="2022-08-27T12:06:01 AST" name="NewUserRegisteration" finished-at="2022-08-27T12:06:53 AST" duration-ms="51847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NewUserRegisteration -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyNewUserRegisteration@52b1beb6]" started-at="2022-08-27T12:06:53 AST" name="TearDown" finished-at="2022-08-27T12:06:53 AST" duration-ms="267" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- testcases.VerifyNewUserRegisteration -->
+      <class name="testcases.VerifyViewAddProductInCart">
+        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyViewAddProductInCart@783a467b]" started-at="2022-08-27T12:07:11 AST" name="Setup" finished-at="2022-08-27T12:07:13 AST" duration-ms="1845" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.VerifyViewAddProductInCart.ViewAddProductInCart() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method signature="ViewAddProductInCart()[pri:0, instance:testcases.VerifyViewAddProductInCart@783a467b]" started-at="2022-08-27T12:07:13 AST" name="ViewAddProductInCart" finished-at="2022-08-27T12:07:35 AST" duration-ms="21466" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewAddProductInCart -->
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyViewAddProductInCart@783a467b]" started-at="2022-08-27T12:07:35 AST" name="TearDown" finished-at="2022-08-27T12:07:35 AST" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TearDown -->
+      </class> <!-- testcases.VerifyViewAddProductInCart -->
+      <class name="testcases.VerifyRestAPI">
+        <test-method is-config="true" signature="Setup(java.lang.reflect.Method)[pri:0, instance:testcases.VerifyRestAPI@272113c4]" started-at="2022-08-27T12:07:35 AST" name="Setup" finished-at="2022-08-27T12:07:37 AST" duration-ms="1903" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -22,18 +131,14 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="APIChaining()[pri:0, instance:testcases.VerifyRestAPI@4659191b]" started-at="2022-08-26T19:19:27 AST" name="APIChaining" finished-at="2022-08-26T19:19:30 AST" duration-ms="2695" status="PASS">
+        <test-method signature="APIChaining()[pri:0, instance:testcases.VerifyRestAPI@272113c4]" started-at="2022-08-27T12:07:37 AST" name="APIChaining" finished-at="2022-08-27T12:07:41 AST" duration-ms="3602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- APIChaining -->
-        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyRestAPI@4659191b]" started-at="2022-08-26T19:19:30 AST" name="TearDown" finished-at="2022-08-26T19:19:30 AST" duration-ms="282" status="PASS">
+        <test-method is-config="true" signature="TearDown()[pri:0, instance:testcases.VerifyRestAPI@272113c4]" started-at="2022-08-27T12:07:41 AST" name="TearDown" finished-at="2022-08-27T12:07:41 AST" duration-ms="371" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TearDown -->
-        <test-method is-config="true" signature="DataTearDown()[pri:0, instance:testcases.VerifyRestAPI@4659191b]" started-at="2022-08-26T19:19:30 AST" name="DataTearDown" finished-at="2022-08-26T19:19:31 AST" duration-ms="479" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DataTearDown -->
       </class> <!-- testcases.VerifyRestAPI -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

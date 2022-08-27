@@ -33,7 +33,7 @@ pipeline {
             }
         }
 		
-		stage('Run Postman Collection')
+		stage('Run Postman Collection') {
 			 when {
                 expression { env.RunPostmanCollection.toBoolean() }
             }
