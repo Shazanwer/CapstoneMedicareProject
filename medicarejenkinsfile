@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+
+    tools {
+        // Install the Maven version configured as "M3" and add it to the path.
+        maven "MAVEN_HOME"
+    }
+
+    stages {
+        stage('Preparation') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/Shazanwer/CapstoneMedicareProject.git'
+            }
+        }
+        
+        stage('Build and Run Test Cases') {
+            when {
+                expression { env.ExecuteTestCase.toBoolean() }
+            }
+            steps {
+                // Run Maven on a Unix agent.
+                bat "mvn clean test -Dsurefire.suiteXmlFiles=testng.xml"
+            }
+        }
+        
+        stage('Publish Report') {
+            when {
+                expression { env.ExecuteTestCase.toBoolean() }
+            }
+            steps {
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'ExtentReport.html', reportName: 'Medicare Extent Report', reportTitles: ''])
+            }
+        }
+        
+        stage('Performance Test') {
+            when {
+                expression { env.RunPerformanceTest.toBoolean() }
+            }
+            steps {
+                bat "C:\\apache-jmeter-5.4.3\\bin\\jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t jmeter//medicare.jmx -l jmeter//results.jtl"
+                perfReport "jmeter//results.jtl"
+            }
+        }
+    }
+}
