@@ -41,7 +41,8 @@ pipeline {
                 bat """
 					cd postman
 					newman run CapstoneMedicareProject.postman_collection.json -r htmlextra
-					"""
+					
+				publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'postman//newman', reportFiles: 'index.html', reportName: 'Newman HTML Report', reportTitles: ''])
             }
         }
         
