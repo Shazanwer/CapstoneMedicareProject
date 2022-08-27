@@ -3,11 +3,11 @@
 <suite name="Suite">
 	<test thread-count="1" name="Test">
 		<classes>
-			<!--<class name="testcases.VerifyDeletedDBData" />
+			<class name="testcases.VerifyDeletedDBData" />
 			<class name="testcases.VerifyNewUserRegisteration" />
 			<class name="testcases.VerifyDBData" />
 			<class name="testcases.VerifyLogin" />
-			<class name="testcases.VerifyViewAddProductInCart" />-->
+			<class name="testcases.VerifyViewAddProductInCart" />
 			<class name="testcases.VerifyRestAPI" />
 		</classes>
 	</test> <!-- Test -->
