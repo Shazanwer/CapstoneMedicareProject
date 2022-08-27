@@ -24,12 +24,21 @@ pipeline {
             }
         }
         
-        stage('Publish Report') {
+        stage('Publish Extent Report') {
             when {
                 expression { env.ExecuteTestCase.toBoolean() }
             }
             steps {
                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'ExtentReport.html', reportName: 'Medicare Extent Report', reportTitles: ''])
+            }
+        }
+		
+		stage('Run Postman Collection')
+			 when {
+                expression { env.RunPostmanCollection.toBoolean() }
+            }
+            steps {
+                newman run "postman//CapstoneMedicareProject.postman_collection.json" -r htmlextra
             }
         }
         

@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "fb7bbee8-9190-464e-ab17-11bb0ccaec54",
+		"name": "CapstoneMedicareProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20973464"
+	},
+	"item": [
+		{
+			"name": "GetAllProductList",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/medicare/json/data/all/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"medicare",
+						"json",
+						"data",
+						"all",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMostValuedProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/medicare/json/data/mv/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"medicare",
+						"json",
+						"data",
+						"mv",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMostPurchasedProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/medicare/json/data/mp/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"medicare",
+						"json",
+						"data",
+						"mp",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductListByCategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8087/medicare/json/data/category/1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8087",
+					"path": [
+						"medicare",
+						"json",
+						"data",
+						"category",
+						"1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
